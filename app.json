@@ -1,0 +1,12 @@
+{
+  "name": "novo-mercado-pago",
+  "displayName": "novo-mercado-pago",
+  "expo": {
+    "name": "novo-mercado-pago",
+    "slug": "novo-mercado-pago",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
