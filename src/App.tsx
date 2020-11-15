@@ -6,6 +6,10 @@ import "./App.scss";
 import Cash from './Pages/Cash/Cash';
 import Home from './Pages/Home/Home';
 import Biometry from './Pages/Biometry/Biometry';
+import MeuFinanceiro from './Pages/MeuFinanceiro/MeuFinanceiro';
+import Programados from './Pages/Programados/Programados';
+import Gerenciamento from './Pages/Gerenciamento/Gerenciamento';
+import SaldoFuturo from './Pages/SaldoFuturo/SaldoFuturo';
 
 function App() {
     return (
@@ -25,19 +29,19 @@ function App() {
                     </Route>
 
                     <Route exact path="/financeiro">
-                        <h2>Financeiro</h2>
+                        <MeuFinanceiro />
                     </Route>
 
                     <Route path="/financeiro/programado">
-                        <h2>Entradas/Saídas Programado</h2>
+                        <Programados/>
                     </Route>
 
                     <Route path="/financeiro/gerenciamento">
-                        <h2>Gerenciamento Finanças</h2>
+                        <Gerenciamento/>
                     </Route>
 
                     <Route path="/financeiro/projecao">
-                        <h2>Projeção Financeira</h2>
+                        <SaldoFuturo/>
                     </Route>
                 </Switch>
             </Router>
