@@ -6,6 +6,7 @@ import "./App.scss";
 import Cash from './Pages/Cash/Cash';
 import Home from './Pages/Home/Home';
 import Biometry from './Pages/Biometry/Biometry';
+import MeuFinanceiro from './Pages/MeuFinanceiro/MeuFinanceiro';
 
 function App() {
     return (
@@ -25,7 +26,7 @@ function App() {
                     </Route>
 
                     <Route exact path="/financeiro">
-                        <h2>Financeiro</h2>
+                        <MeuFinanceiro />
                     </Route>
 
                     <Route path="/financeiro/programado">
