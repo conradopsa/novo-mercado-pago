@@ -2,9 +2,9 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
+import Cash from './Pages/Cash/Cash';
 import './App.css';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
                 </Route>
 
                 <Route path="/cash">
-                    <h2>Mercado Cash</h2>
+                    <Cash />
                 </Route>
 
                 <Route path="/biometria">
