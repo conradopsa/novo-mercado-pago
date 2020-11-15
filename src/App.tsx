@@ -1,26 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Switch>
+                <Route exact path="/">
+                    <h2>Home</h2>
+                </Route>
+
+                <Route path="/cash">
+                    <h2>Mercado Cash</h2>
+                </Route>
+
+                <Route path="/biometria">
+                    <h2>Biometria</h2>
+                </Route>
+
+                <Route exact path="/financeiro">
+                    <h2>Financeiro</h2>
+                </Route>
+                
+                <Route path="/financeiro/programado">
+                    <h2>Entradas/Saídas Programado</h2>
+                </Route>
+
+                <Route path="/financeiro/gerenciamento">
+                    <h2>Gerenciamento Finanças</h2>
+                </Route>
+
+                <Route path="/financeiro/projecao">
+                    <h2>Projeção Financeira</h2>
+                </Route>
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;
