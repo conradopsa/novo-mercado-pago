@@ -75,7 +75,7 @@ export default function Biometry() {
                     </Grid>
 
                     <Grid item>
-                        <Button fullWidth={true} variant="contained" component={Link} to="/">
+                        <Button fullWidth={true} color="primary" variant="contained" component={Link} to="/">
                             Voltar
                         </Button>
                     </Grid>
