@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { theme } from "./Theme";
 import "./App.scss";
+import Cash from './Pages/Cash/Cash';
 import Home from './Pages/Home/Home';
 import Biometry from './Pages/Biometry/Biometry';
 
@@ -16,7 +17,7 @@ function App() {
                     </Route>
 
                     <Route path="/cash">
-                        <h2>Mercado Cash</h2>
+                        <Cash />
                     </Route>
 
                     <Route path="/biometria">
