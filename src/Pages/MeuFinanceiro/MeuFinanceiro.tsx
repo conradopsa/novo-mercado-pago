@@ -8,7 +8,7 @@ import {
 import './style.tsx';
 import { AppBar, Typography, IconButton, Menu, MenuItem,Toolbar } from '@material-ui/core';
 import Share from '@material-ui/icons/Share';
-import MenuIcon from '@material-ui/icons/Menu';
+import ChevronLeft from '@material-ui/icons/ChevronLeft';
 import useStyles from './style';
 import TrendingUp from '@material-ui/icons/TrendingUp';
 import TrendingDown from '@material-ui/icons/TrendingDown';
@@ -23,8 +23,8 @@ function MeuFinanceiro() {
         <>
             <AppBar position="static">
                 <Toolbar className={classes.toolbar}>
-                <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                    <MenuIcon />
+                <IconButton edge="start" component={Link} to="/" className={classes.menuButton} color="inherit" aria-label="menu">
+                    <ChevronLeft />
                 </IconButton>
                 <Typography variant="h6" className={classes.title}>
                     Meu Financeiro
