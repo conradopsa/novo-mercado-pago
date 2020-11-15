@@ -7,6 +7,7 @@ import Cash from './Pages/Cash/Cash';
 import Home from './Pages/Home/Home';
 import Biometry from './Pages/Biometry/Biometry';
 import MeuFinanceiro from './Pages/MeuFinanceiro/MeuFinanceiro';
+import Programados from './Pages/Programados/Programados';
 
 function App() {
     return (
@@ -30,7 +31,7 @@ function App() {
                     </Route>
 
                     <Route path="/financeiro/programado">
-                        <h2>Entradas/Saídas Programado</h2>
+                        <Programados/>
                     </Route>
 
                     <Route path="/financeiro/gerenciamento">
