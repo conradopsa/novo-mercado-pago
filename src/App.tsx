@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/core/styles";
 import { theme } from "./Theme";
 import "./App.scss";
-import Cash from './Pages/Cash/Cash';
-import Home from './Pages/Home/Home';
-import Biometry from './Pages/Biometry/Biometry';
-import MeuFinanceiro from './Pages/MeuFinanceiro/MeuFinanceiro';
-import Programados from './Pages/Programados/Programados';
-import Gerenciamento from './Pages/Gerenciamento/Gerenciamento';
-import SaldoFuturo from './Pages/SaldoFuturo/SaldoFuturo';
+import Cash from './pages/Cash/Cash';
+import Home from './pages/Home/Home';
+import Biometry from './pages/Biometry/Biometry';
+import MeuFinanceiro from './pages/MeuFinanceiro/MeuFinanceiro';
+import Programados from './pages/Programados/Programados';
+import Gerenciamento from './pages/Gerenciamento/Gerenciamento';
+import SaldoFuturo from './pages/SaldoFuturo/SaldoFuturo';
 
 function App() {
     return (
