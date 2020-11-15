@@ -14,17 +14,36 @@ import TrendingUp from '@material-ui/icons/TrendingUp';
 import TrendingDown from '@material-ui/icons/TrendingDown';
 import AttachMoney from '@material-ui/icons/AttachMoney';
 import MoneyOff from '@material-ui/icons/MoneyOff';
+import PlayCircleFilledWhite from '@material-ui/icons/PlayCircleFilledWhite';
 import Edit from '@material-ui/icons/Edit';
 import FilterList from '@material-ui/icons/FilterList';
-import Carousel from "react-elastic-carousel";
-import Item from "./Item";
-import {StyledDiv} from "./style";
+import Settings from '@material-ui/icons/Settings';
+import { Doughnut } from 'react-chartjs-2';
 
-function MeuFinanceiro() {
+const dataFirstResult = {
+	labels: ['Opção 1', 'Opção 2', 'Opção 3'],
+	datasets: [
+		{
+			data: [300, 50, 100],
+			backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+            hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+		}
+    ],
+};
+
+const dataSecondResult = {
+	labels: ['Opção 1', 'Opção 2', 'Opção 3'],
+	datasets: [
+		{
+			data: [300, 50, 100],
+			backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
+            hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+		}
+    ],
+};
+
+function Gerenciamento() {
     const classes = useStyles();
-    const greenColor: string = "#77C87F";
-    const redColor: string = "#FF9090";
-
     return (
         <>
             <AppBar position="static">
@@ -33,7 +52,7 @@ function MeuFinanceiro() {
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" className={classes.title}>
-                    Transações Programadas
+                    Seu Gerenciamento
                 </Typography>
                     <IconButton color="inherit">
                         <Share 
@@ -79,20 +98,24 @@ function MeuFinanceiro() {
                     </div>
                 </div>
             </div>
-            <StyledDiv className={classes.carousel}>
-                <Carousel itemsToScroll={5} itemsToShow={5} className={classes.carousel}  showArrows={true} pagination={false}>
-                    <Item style={{backgroundColor: greenColor}}>One</Item>
-                    <Item style={{backgroundColor: redColor}}>Two</Item>
-                    <Item style={{backgroundColor: redColor}}>Three</Item>
-                    <Item style={{backgroundColor: redColor}}>Four</Item>
-                    <Item style={{backgroundColor: redColor}}>Five</Item>
-                    <Item style={{backgroundColor: greenColor}}>Six</Item>
-                    <Item style={{backgroundColor: greenColor}}>Seven</Item>
-                    <Item style={{backgroundColor: greenColor}}>Eight</Item>
-                </Carousel>
-            </StyledDiv>
             <div className={classes.editOptions}>
-                <Button className={classes.buttonAdd}>ADICIONAR</Button>
+                <Button className={classes.buttonAdd}>RESULTADO DESEJADO</Button>
+                <Button className={classes.settings}>
+                <p className={classes.settingName}>Ajustes</p>
+                <Settings fontSize="small" className={classes.settingIcon}/>
+            </Button>
+            </div>
+            <div className="flex flex-col items-center w-full max-w-md">
+				<Doughnut data={dataFirstResult} />
+			</div>
+            <div className={classes.editOptions}>
+                <Button className={classes.buttonAdd}>RESULTADO ATUAL</Button>
+            </div>
+            <div className="flex flex-col items-center w-full max-w-md">
+				<Doughnut data={dataSecondResult} />
+			</div>
+            <div className={classes.editOptions}>
+                <Button className={classes.buttonAdd}>TRANSAÇÕES DO MÊS</Button>
                 <Button className={classes.settings}>
                     <FilterList fontSize="small" className={classes.settingIcon}/>
                 </Button>
@@ -121,4 +144,4 @@ function MeuFinanceiro() {
     );
 }
 
-export default MeuFinanceiro;
+export default Gerenciamento;

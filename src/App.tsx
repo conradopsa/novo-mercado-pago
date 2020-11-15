@@ -8,6 +8,7 @@ import Home from './Pages/Home/Home';
 import Biometry from './Pages/Biometry/Biometry';
 import MeuFinanceiro from './Pages/MeuFinanceiro/MeuFinanceiro';
 import Programados from './Pages/Programados/Programados';
+import Gerenciamento from './Pages/Gerenciamento/Gerenciamento';
 
 function App() {
     return (
@@ -35,7 +36,7 @@ function App() {
                     </Route>
 
                     <Route path="/financeiro/gerenciamento">
-                        <h2>Gerenciamento Finanças</h2>
+                        <Gerenciamento/>
                     </Route>
 
                     <Route path="/financeiro/projecao">
