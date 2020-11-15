@@ -47,7 +47,7 @@ export default function Biometry() {
     
             <Container maxWidth="sm">
                 <Grid container direction="column" spacing={3}>
-                    <Grid item>
+                    <Grid item style={{alignSelf: 'center'}}>
                         <Draw style={{height: '25vh', maxHeight: '150px', width: 'auto', marginTop: '2vh'}} />
                     </Grid>
                 
@@ -65,7 +65,7 @@ export default function Biometry() {
                         </Grid>
                     </Grid>
 
-                    <Grid item>
+                    <Grid item style={{alignSelf: 'flex-start'}}>
                         <FormGroup>
                             <FormControlLabel
                                 control={<Switch size="small" checked={checked} onChange={toggleChecked} />}
