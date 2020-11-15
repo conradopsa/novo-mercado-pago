@@ -1,12 +1,7 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import './style.tsx';
-import { AppBar, Typography, IconButton, Menu, MenuItem,Toolbar } from '@material-ui/core';
+import { AppBar, Typography, IconButton, Toolbar } from '@material-ui/core';
 import Share from '@material-ui/icons/Share';
 import ChevronLeft from '@material-ui/icons/ChevronLeft';
 import useStyles from './style';
@@ -18,7 +13,9 @@ import PlayCircleFilledWhite from '@material-ui/icons/PlayCircleFilledWhite';
 
 
 function MeuFinanceiro() {
+    const history = useHistory();
     const classes = useStyles();
+
     return (
         <>
             <AppBar position="static">
@@ -42,6 +39,7 @@ function MeuFinanceiro() {
                     </IconButton>
                 </Toolbar>
             </AppBar>
+
             <div className={classes.saldoTitleContent}>
                 <p className={classes.saldoTitle}>
                     Saldo em Conta
@@ -53,6 +51,7 @@ function MeuFinanceiro() {
                     M$ 1.523,00
                 </p>
             </div>
+
             <div className={classes.totals}>
                 <div className={classes.boxTotalLeft}>
                     <div className={classes.totalLeftIcon}>
@@ -73,7 +72,8 @@ function MeuFinanceiro() {
                     </div>
                 </div>
             </div>
-            <div className={classes.card}>
+
+            <div className={classes.card} onClick={() => history.push('/financeiro/programado')}>
                 <p className={classes.cardTitle}>Entradas / Saídas Programadas</p>
                 <p className={classes.cardDescription}>Total</p>
                 <div className={classes.totalCard}>
@@ -100,7 +100,8 @@ function MeuFinanceiro() {
                     <PlayCircleFilledWhite style={{color: "#FFFF"}}/>
                 </div>
             </div>
-            <div className={classes.card}>
+
+            <div className={classes.card} onClick={() => history.push('/financeiro/gerenciamento')}>
                 <p className={classes.cardTitle}>Seu Gerenciamento</p>
                 <p className={classes.cardDescription}>Última Movimentação</p>
                 <div className={classes.totalCardMoviment}>
@@ -118,7 +119,7 @@ function MeuFinanceiro() {
                     <PlayCircleFilledWhite style={{color: "#FFFF"}}/>
                 </div>
             </div>
-            <div className={classes.card}>
+            <div className={classes.card} onClick={() => history.push('/financeiro/projecao')}>
                 <p className={classes.cardTitle}>Saldo Futuro Previsto</p>
                 <p className={classes.cardDescription}>ATUAL / PREVISTA</p>
                 <div className={classes.totalCardMoviment}>

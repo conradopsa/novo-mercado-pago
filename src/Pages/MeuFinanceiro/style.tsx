@@ -137,7 +137,8 @@ const useStyles = makeStyles((theme) => ({
       height: 120,
       maxHeight: 120,
       borderRadius: 5,
-      flexDirection: "column"
+      flexDirection: "column",
+      cursor: 'pointer'
     },
     cardTitle:{
       color: "#FFFF",
