@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 import styled from "styled-components";
 
-const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
     },
@@ -246,8 +246,5 @@ export const StyledDiv = styled.div`
   /* add custom outline on focused items */
   .rec-carousel-item:focus {
       outline: none;
-  }
-  .fqkuix {
-    font-size: 1em !important;
   }
 `

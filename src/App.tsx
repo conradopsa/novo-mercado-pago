@@ -9,6 +9,7 @@ import Biometry from './Pages/Biometry/Biometry';
 import MeuFinanceiro from './Pages/MeuFinanceiro/MeuFinanceiro';
 import Programados from './Pages/Programados/Programados';
 import Gerenciamento from './Pages/Gerenciamento/Gerenciamento';
+import SaldoFuturo from './Pages/SaldoFuturo/SaldoFuturo';
 
 function App() {
     return (
@@ -40,7 +41,7 @@ function App() {
                     </Route>
 
                     <Route path="/financeiro/projecao">
-                        <h2>Projeção Financeira</h2>
+                        <SaldoFuturo/>
                     </Route>
                 </Switch>
             </Router>
