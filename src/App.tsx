@@ -6,6 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import './App.css';
+import MeuFinanceiro from './Pages/MeuFinanceiro/MeuFinanceiro'
 
 function App() {
     return (
@@ -24,7 +25,7 @@ function App() {
                 </Route>
 
                 <Route exact path="/financeiro">
-                    <h2>Financeiro</h2>
+                    <MeuFinanceiro />
                 </Route>
                 
                 <Route path="/financeiro/programado">
