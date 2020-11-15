@@ -2,10 +2,10 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import './App.css';
+import Biometry from './Pages/Biometry/Biometry';
 
 function App() {
     return (
@@ -20,7 +20,7 @@ function App() {
                 </Route>
 
                 <Route path="/biometria">
-                    <h2>Biometria</h2>
+                    <Biometry />
                 </Route>
 
                 <Route exact path="/financeiro">
