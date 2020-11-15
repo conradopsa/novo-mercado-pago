@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AppBar, IconButton, Toolbar, Typography, Container, Grid, FormGroup, FormControlLabel, Switch } from '@material-ui/core';
+import { AppBar, IconButton, Toolbar, Typography, Container, Grid, FormGroup, FormControlLabel, Switch, Button } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import Share from '@material-ui/icons/Share';
 import { ReactComponent as Draw } from '../../assets/biometry_draw.svg';
@@ -65,13 +65,19 @@ export default function Biometry() {
                         </Grid>
                     </Grid>
 
-                    <Grid item style={{alignSelf: 'flex-start'}}>
+                    <Grid item>
                         <FormGroup>
                             <FormControlLabel
                                 control={<Switch size="small" checked={checked} onChange={toggleChecked} />}
                                 label="Ativar Biometria"
                             />
                         </FormGroup>
+                    </Grid>
+
+                    <Grid item>
+                        <Button fullWidth={true} variant="contained" component={Link} to="/">
+                            Voltar
+                        </Button>
                     </Grid>
                 </Grid>
             </Container>
