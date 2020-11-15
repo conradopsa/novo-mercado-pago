@@ -138,7 +138,11 @@ const useStyles = makeStyles((theme) => ({
       maxHeight: 120,
       borderRadius: 5,
       flexDirection: "column",
-      cursor: 'pointer'
+      transition: 'all 0.2s ease-out',
+      cursor: 'pointer',
+      '&:hover,&:active': {
+          opacity: '0.85'
+      }
     },
     cardTitle:{
       color: "#FFFF",
