@@ -63,7 +63,7 @@ export default function Biometry() {
                 <Box my={1}>
                     <FormGroup>
                         <FormControlLabel
-                            control={<Switch size="small" checked={checked} onChange={toggleChecked} />}
+                            control={<Switch color="primary" size="small" checked={checked} onChange={toggleChecked} />}
                             label={<Typography variant="caption" component="p">Ativar Biometria</Typography>}
                         />
                     </FormGroup>
