@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { AppBar, IconButton, Toolbar, Typography, Container, Grid, FormGroup, FormControlLabel, Switch, Button } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import { AppBar, IconButton, Toolbar, Typography, Container, Grid, FormGroup, FormControlLabel, Switch, Box } from '@material-ui/core';
+import ChevronLeft from '@material-ui/icons/ChevronLeft';
 import Share from '@material-ui/icons/Share';
 import { ReactComponent as Draw } from '../../assets/biometry_draw.svg';
 
@@ -15,71 +15,61 @@ export default function Biometry() {
     return (
         <>
             <AppBar elevation={1} position="static">
-                <Container maxWidth="xl">
-                    <Toolbar>
-                        <Grid container direction="row" alignItems="center">
-                            <Grid item>
-                                <IconButton edge="start" color="inherit" aria-label="menu">
-                                    <MenuIcon />
-                                </IconButton>
-                            </Grid>
-                        
-                            <Grid item style={{flex: '1'}}>
-                                <Typography variant="body1" align="center">
-                                    Biometria
-                                </Typography>
-                            </Grid>
-                        
-                            <Grid item>
-                                <IconButton
-                                    aria-label="share"
-                                    aria-controls="menu-appbar"
-                                    aria-haspopup="true"
-                                    color="inherit"
-                                >
-                                    <Share />
-                                </IconButton>
-                            </Grid>
+                <Toolbar>
+                    <Grid container direction="row" alignItems="center">
+                        <Grid item>
+                            <IconButton component={Link} to="/" edge="start" color="inherit" aria-label="menu">
+                                <ChevronLeft />
+                            </IconButton>
                         </Grid>
-                    </Toolbar>
-                </Container>
+                    
+                        <Grid item style={{flex: '1'}}>
+                            <Typography variant="body1" align="center">
+                                Biometria
+                            </Typography>
+                        </Grid>
+                    
+                        <Grid item>
+                            <IconButton
+                                aria-label="share"
+                                aria-controls="menu-appbar"
+                                aria-haspopup="true"
+                                color="inherit"
+                            >
+                                <Share />
+                            </IconButton>
+                        </Grid>
+                    </Grid>
+                </Toolbar>
             </AppBar>
     
             <Container maxWidth="sm">
-                <Grid container direction="column" spacing={3}>
-                    <Grid item style={{alignSelf: 'center'}}>
-                        <Draw style={{height: '25vh', maxHeight: '150px', width: 'auto', marginTop: '2vh'}} />
-                    </Grid>
-                
-                     <Grid item>
-                        <Grid container direction="column" style={{border: '1px solid #ccc', borderRadius: '4px'}} spacing={2}>
-                            <Grid item style={{borderBottom: '1px solid #ccc', paddingLeft: '1vw', paddingRight: '1vw'}}>
-                                <Typography variant="subtitle2">
-                                    Realize pagamentos com a Biometria
-                                </Typography>
-                            </Grid>
+                <Box my={2}>
+                    <Draw style={{width: '100%', height: '20vh', maxHeight: '150px'}} />
+                </Box>
 
-                            <Grid item style={{paddingLeft: '1vw', paddingRight: '1vw'}}>
-                                Com a biometria, seus pagamentos se tornam mais seguros
-                            </Grid>
+                <Box my={2}>
+                    <Grid container direction="column" style={{border: '1px solid #ccc', borderRadius: '4px'}} spacing={2}>
+                        <Grid item style={{borderBottom: '1px solid #ccc', paddingLeft: '2vw', paddingRight: '2vw'}}>
+                            <Typography variant="subtitle2" component="p">
+                                Realize pagamentos com a Biometria
+                            </Typography>
+                        </Grid>
+
+                        <Grid item style={{paddingLeft: '2vw', paddingRight: '2vw'}}>
+                            Com a biometria, seus pagamentos se tornam mais seguros
                         </Grid>
                     </Grid>
+                </Box>
 
-                    <Grid item>
-                        <FormGroup>
-                            <FormControlLabel
-                                control={<Switch size="small" checked={checked} onChange={toggleChecked} />}
-                                label="Ativar Biometria"
-                            />
-                        </FormGroup>
-                    </Grid>
-
-                    <Grid item>
-                        <Button fullWidth={true} color="primary" variant="contained" component={Link} to="/">
-                            Voltar
-                        </Button>
-                    </Grid>
-                </Grid>
+                <Box my={1}>
+                    <FormGroup>
+                        <FormControlLabel
+                            control={<Switch size="small" checked={checked} onChange={toggleChecked} />}
+                            label="Ativar Biometria"
+                        />
+                    </FormGroup>
+                </Box>
             </Container>
         </>
     );
