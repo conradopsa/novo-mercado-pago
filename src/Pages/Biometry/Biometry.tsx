@@ -51,9 +51,7 @@ export default function Biometry() {
                 <Box my={2}>
                     <Grid container direction="column" style={{border: '1px solid #ccc', borderRadius: '4px'}} spacing={2}>
                         <Grid item style={{borderBottom: '1px solid #ccc', paddingLeft: '2vw', paddingRight: '2vw'}}>
-                            <Typography variant="subtitle2" component="p">
-                                Realize pagamentos com a Biometria
-                            </Typography>
+                            Realize pagamentos com a Biometria
                         </Grid>
 
                         <Grid item style={{paddingLeft: '2vw', paddingRight: '2vw'}}>
@@ -66,7 +64,7 @@ export default function Biometry() {
                     <FormGroup>
                         <FormControlLabel
                             control={<Switch size="small" checked={checked} onChange={toggleChecked} />}
-                            label="Ativar Biometria"
+                            label={<Typography variant="caption" component="p">Ativar Biometria</Typography>}
                         />
                     </FormGroup>
                 </Box>
