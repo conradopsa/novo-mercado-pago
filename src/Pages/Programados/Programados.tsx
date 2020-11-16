@@ -8,6 +8,13 @@ import ChevronLeft from '@material-ui/icons/ChevronLeft';
 import TrendingUp from '@material-ui/icons/TrendingUp';
 import FilterList from '@material-ui/icons/FilterList';
 import Add from '@material-ui/icons/Add';
+import Flight from '@material-ui/icons/Flight';
+import AttachMoney from '@material-ui/icons/AttachMoney';
+import Fastfood from '@material-ui/icons/Fastfood';
+import FitnessCenter from '@material-ui/icons/FitnessCenter';
+import FlashOn from '@material-ui/icons/FlashOn';
+import CardGiftcard from '@material-ui/icons/CardGiftcard';
+import CameraAlt from '@material-ui/icons/CameraAlt';
 
 import useStyles, { StyledDiv } from "./style";
 import CarouselItem from "./CarouselItem";
@@ -17,17 +24,17 @@ const DADOS = [
     {
         category: 0,
         description: 'SALÁRIO MENSAL',
-        value: 2752.29
+        value: 3397.98
     },
     {
         category: 1,
         description: 'EMPRÉSTIMO',
-        value: 222.90
+        value: 500
     },
     {
         category: 1,
         description: 'EMPRÉSTIMO',
-        value: 550.31
+        value: 500
     }
 ];
 
@@ -120,14 +127,14 @@ function MeuFinanceiro() {
             <Box my={2} style={{maxWidth: '600px', margin: '0 auto'}}>
                 <StyledDiv className={classes.carousel}>
                     <Carousel itemsToScroll={5} itemsToShow={5} className={classes.carousel} showArrows={true} pagination={false}>
-                        <CarouselItem style={{ backgroundColor: greenColor }}>One</CarouselItem>
-                        <CarouselItem style={{ backgroundColor: redColor }}>Two</CarouselItem>
-                        <CarouselItem style={{ backgroundColor: redColor }}>Three</CarouselItem>
-                        <CarouselItem style={{ backgroundColor: redColor }}>Four</CarouselItem>
-                        <CarouselItem style={{ backgroundColor: redColor }}>Five</CarouselItem>
-                        <CarouselItem style={{ backgroundColor: greenColor }}>Six</CarouselItem>
-                        <CarouselItem style={{ backgroundColor: greenColor }}>Seven</CarouselItem>
-                        <CarouselItem style={{ backgroundColor: greenColor }}>Eight</CarouselItem>
+                        <CarouselItem style={{ backgroundColor: greenColor }}><AttachMoney/></CarouselItem>
+                        <CarouselItem style={{ backgroundColor: redColor }}><Flight/></CarouselItem>
+                        <CarouselItem style={{ backgroundColor: redColor }}><Fastfood/></CarouselItem>
+                        <CarouselItem style={{ backgroundColor: redColor }}><FitnessCenter/></CarouselItem>
+                        <CarouselItem style={{ backgroundColor: redColor }}><FlashOn/></CarouselItem>
+                        <CarouselItem style={{ backgroundColor: greenColor }}><TrendingUp/></CarouselItem>
+                        <CarouselItem style={{ backgroundColor: greenColor }}><CardGiftcard/></CarouselItem>
+                        <CarouselItem style={{ backgroundColor: greenColor }}><CameraAlt/></CarouselItem>
                     </Carousel>
                 </StyledDiv>
             </Box>

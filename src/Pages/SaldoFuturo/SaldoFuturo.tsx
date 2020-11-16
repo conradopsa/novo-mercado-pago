@@ -30,13 +30,13 @@ const dataFirstResult = {
             label: "Lucro",
 			backgroundColor: ['rgba(119,200,127,1)', 'rgba(119,200,127,0.7)', 'rgba(119,200,127,0.4)'],
 			hoverBackgroundColor: 'rgba(119,200,127,1)',
-			data: [65, 0, 80]
+			data: [3000, 97.98, 300]
         },
         {
             label: "Prejuízo",
 			backgroundColor: ['rgba(255,144,144,1)', 'rgba(255,144,144,0.7)', 'rgba(255,144,144,0.4)'],
 			hoverBackgroundColor: 'rgba(255,144,144,1)',
-			data: [0, 59, 0]
+			data: [1000, 0, 0]
         }
     ],
 };
@@ -48,13 +48,13 @@ const dataSecondResult = {
             label: "Lucro",
 			backgroundColor: ['rgba(119,200,127,1)', 'rgba(119,200,127,0.7)', 'rgba(119,200,127,0.4)'],
 			hoverBackgroundColor: 'rgba(119,200,127,1)',
-			data: [65, 0, 80]
+			data: [1397, 0, 0]
         },
 		{
             label: "Prejuízo",
 			backgroundColor: ['rgba(255,144,144,1)', 'rgba(255,144,144,0.7)', 'rgba(255,144,144,0.4)'],
 			hoverBackgroundColor: 'rgba(255,144,144,1)',
-			data: [0, 59, 0]
+			data: [0, 0, 0]
         }
     ],
 };

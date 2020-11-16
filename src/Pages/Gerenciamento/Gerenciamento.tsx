@@ -21,10 +21,10 @@ import Settings from '@material-ui/icons/Settings';
 import { Doughnut } from 'react-chartjs-2';
 
 const dataFirstResult = {
-	labels: ['Opção 1', 'Opção 2', 'Opção 3'],
+	labels: ['Despesas', 'Diversão', 'Vendas'],
 	datasets: [
 		{
-			data: [300, 50, 100],
+			data: [1000, 500, 3000],
 			backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
             hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
 		}
@@ -32,10 +32,10 @@ const dataFirstResult = {
 };
 
 const dataSecondResult = {
-	labels: ['Opção 1', 'Opção 2', 'Opção 3'],
+	labels: ['Despesas', 'Diversão', 'Vendas'],
 	datasets: [
 		{
-			data: [300, 50, 100],
+			data: [1000, 50, 3000],
 			backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
             hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
 		}
@@ -72,10 +72,10 @@ function Gerenciamento() {
                     Saldo em Conta
                 </p>
                 <p className={classes.valorSaldo}>
-                    R$ 2.397,98
+                    R$ 2397,98
                 </p>
                 <p className={classes.valorSaldoCash}>
-                    M$ 1.523,00
+                    M$ 1523,00
                 </p>
             </div>
             <div className={classes.totals}>
@@ -85,7 +85,7 @@ function Gerenciamento() {
                     </div>
                     <div className={classes.totalLeft}>
                         <p className={classes.totalLeftTitle}>Tot. Entradas</p>
-                        <p className={classes.totalLeftValue}>R$XXX,XX</p>
+                        <p className={classes.totalLeftValue}>R$2397,98</p>
                     </div>
                 </div>
                 <div className={classes.boxTotalRight}>
@@ -94,7 +94,7 @@ function Gerenciamento() {
                     </div>
                     <div className={classes.totalRight}>
                         <p className={classes.totalRightTitle}>Tot. Saídas</p>
-                        <p className={classes.totalRightValue}>R$XXX,XX</p>
+                        <p className={classes.totalRightValue}>R$1000,00</p>
                     </div>
                 </div>
             </div>
@@ -128,7 +128,7 @@ function Gerenciamento() {
                         </div>
                         <div className={classes.totalLeft}>
                             <p className={classes.totalLeftTitle}>05/ABR</p>
-                            <p className={classes.totalLeftValue}>R$XXX,XX</p>
+                            <p className={classes.totalLeftValue}>R$ 2397,98</p>
                         </div>
                     </div>
                     <div className={classes.cardDetail}>

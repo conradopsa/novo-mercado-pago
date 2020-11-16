@@ -45,10 +45,10 @@ function MeuFinanceiro() {
                     Saldo em Conta
                 </p>
                 <p className={classes.valorSaldo}>
-                    R$ 2.397,98
+                    R$ 2397,98
                 </p>
                 <p className={classes.valorSaldoCash}>
-                    M$ 1.523,00
+                    M$ 1523,00
                 </p>
             </div>
 
@@ -59,7 +59,7 @@ function MeuFinanceiro() {
                     </div>
                     <div className={classes.totalLeft}>
                         <p className={classes.totalLeftTitle}>Tot. Entradas</p>
-                        <p className={classes.totalLeftValue}>R$XXX,XX</p>
+                        <p className={classes.totalLeftValue}>R$2397,98</p>
                     </div>
                 </div>
                 <div className={classes.boxTotalRight}>
@@ -68,7 +68,7 @@ function MeuFinanceiro() {
                     </div>
                     <div className={classes.totalRight}>
                         <p className={classes.totalRightTitle}>Tot. Saídas</p>
-                        <p className={classes.totalRightValue}>R$XXX,XX</p>
+                        <p className={classes.totalRightValue}>R$1000,00</p>
                     </div>
                 </div>
             </div>
@@ -82,8 +82,8 @@ function MeuFinanceiro() {
                             <AttachMoney fontSize="large"/>
                         </div>
                         <div className={classes.cardLeft}>
-                            <p className={classes.cardMoneyValue}>R$XXX,XX</p>
-                            <p className={classes.cardCashValue}>M$XXX,XX</p>
+                            <p className={classes.cardMoneyValue}>R$3397,98</p>
+                            <p className={classes.cardCashValue}>M$1523,00</p>
                         </div>
                     </div>
                     <div className={classes.cardTotalRight}>
@@ -91,8 +91,8 @@ function MeuFinanceiro() {
                             <MoneyOff fontSize="large"/>
                         </div>
                         <div className={classes.cardRight}>
-                            <p className={classes.cardMoneyValue}>R$XXX,XX</p>
-                            <p className={classes.cardCashValue}>M$XXX,XX</p>
+                            <p className={classes.cardMoneyValue}>R$1000,00</p>
+                            <p className={classes.cardCashValue}>M$0000,00</p>
                         </div>
                     </div>
                 </div>
@@ -110,7 +110,7 @@ function MeuFinanceiro() {
                             <AttachMoney fontSize="large"/>
                         </div>
                         <div className={classes.cardLeft}>
-                            <p className={classes.cardMoneyValue}>R$XXX,XX</p>
+                            <p className={classes.cardMoneyValue}>R$2000,00</p>
                             <p className={classes.cardTypeName}>SALÁRIO MENSAL</p>
                         </div>
                     </div>
@@ -128,9 +128,9 @@ function MeuFinanceiro() {
                             <AttachMoney fontSize="small"/>
                         </div>
                         <div className={classes.valueFutureBox}>
-                            <p className={classes.cardValueNow}>R$XXX,XX</p>
+                            <p className={classes.cardValueNow}>R$2397,98</p>
                             <p className={classes.cardValueNow} > / </p>
-                            <p className={classes.cardValueFuture}>R$XXX,XX</p>
+                            <p className={classes.cardValueFuture}>R$3397,98</p>
                         </div>
                     </div>
                 </div>
@@ -140,9 +140,9 @@ function MeuFinanceiro() {
                             <MoneyOff fontSize="small"/>
                         </div>
                         <div className={classes.valueFutureBox}>
-                            <p className={classes.cardValueNow}>R$XXX,XX</p>
+                            <p className={classes.cardValueNow}>R$1000,00</p>
                             <p className={classes.cardValueNow} > / </p>
-                            <p className={classes.cardValueFuture}>R$XXX,XX</p>
+                            <p className={classes.cardValueFuture}>R$1000,00</p>
                         </div>
                     </div>
                 </div>

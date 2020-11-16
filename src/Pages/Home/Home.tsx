@@ -72,7 +72,7 @@ function Home() {
 		<div className="home-header-card">
 			<div className="home-header-balance">
 				<h3>
-					R$ 11.459,00
+					R$ 2.397,98
 				</h3>
 				<p>
 					M$ 1.523,00
