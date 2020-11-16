@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AppBar, Toolbar, IconButton, Typography, Container, Grid, Button } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+import ChevronLeft from '@material-ui/icons/ChevronLeft';
 import Share from '@material-ui/icons/Share';
 import Money from '@material-ui/icons/Money';
 import MonetizationOn from '@material-ui/icons/MonetizationOn';
@@ -11,17 +11,15 @@ export default function Cash() {
     return (
         <>
             <AppBar position="static" elevation={1}>
-                <Container maxWidth="xl">
-                    <Toolbar>
-                        <IconButton edge="start" color="inherit" aria-label="menu">
-                            <MenuIcon />
+                <Toolbar>
+                    <Grid container direction="row" alignItems="center">
+                        <IconButton component={Link} to="/" edge="start" color="inherit" aria-label="menu">
+                            <ChevronLeft />
                         </IconButton>
 
-                        <Container maxWidth="xl">
-                            <Typography variant="body1" align="center">
-                                Mercado Cash
-                            </Typography>
-                        </Container>
+                        <Typography variant="body1" align="center" style={{flex: '1'}}>
+                            Mercado Cash
+                        </Typography>
             
                         <IconButton
                             aria-label="share result"
@@ -31,8 +29,8 @@ export default function Cash() {
                         >
                             <Share />
                         </IconButton>
-                    </Toolbar>
-                </Container>
+                    </Grid>
+                </Toolbar>
             </AppBar>
 
             <Container maxWidth="sm">
@@ -94,19 +92,9 @@ export default function Cash() {
                     </Grid>
                 </Grid> 
 
-                <Grid container direction="row" wrap="nowrap" justify="space-between">
-                    <Grid item>
-                        <Button color="primary" component={Link} to="/" variant="contained">
-                            Voltar
-                        </Button>
-                    </Grid>
-
-                    <Grid item>
-                        <Button color="primary" variant="contained">
-                            Transferir M$
-                        </Button>
-                    </Grid>
-                </Grid>
+                <Button fullWidth={true} color="primary" variant="contained" style={{float: 'right'}}>
+                    Transferir M$
+                </Button>
             </Container>
         </>
     );
